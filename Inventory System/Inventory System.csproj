@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shoppaymentorderbuy-08_icon-icons.com_73885.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
       <HintPath>C:\Users\johnj\Desktop\itextsharp.dll</HintPath>
@@ -145,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warehouse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="shoppaymentorderbuy-08_icon-icons.com_73885.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

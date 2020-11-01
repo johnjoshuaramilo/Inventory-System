@@ -57,7 +57,6 @@ CREATE TABLE `tblitemlog` (
 CREATE TABLE `tblitems` (
   `fID` bigint(20) NOT NULL,
   `fTagNumber` int(11) DEFAULT NULL,
-  `fEmployee` varchar(255) DEFAULT NULL,
   `fItemName` varchar(255) DEFAULT NULL,
   `fLifeSpan` varchar(255) DEFAULT NULL,
   `fAcquired` varchar(255) DEFAULT NULL,
