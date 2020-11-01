@@ -194,8 +194,8 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`fID`, `fUserName`, `fPassword`, `fAccess`, `fFirstName`, `fLastName`, `fDepartment`, `fTimeStamp`) VALUES
-(1, 'josh', 'josh', 'admin', 'joshua', 'josh', 'Marketing', '2020-02-27 02:37:59'),
-(4, 'guest', 'guest', 'regular', 'testing', 'testing', 'Marketing', '2020-02-27 01:11:50');
+(1, 'admin', 'admin', 'admin', 'admin', 'testing', 'Marketing', '2020-02-27 02:37:59'),
+(4, 'guest', 'guest', 'regular', 'guest', 'testing', 'Marketing', '2020-02-27 01:11:50');
 
 --
 -- Indexes for dumped tables

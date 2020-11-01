@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Odbc;
-using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 
 namespace DataBase
 {
 	class DatabaseManager
 	{
-		OdbcConnection con = new OdbcConnection();
-		OdbcDataAdapter oda = new OdbcDataAdapter();
+		MySqlConnection con = new MySqlConnection();
+		MySqlDataAdapter oda = new MySqlDataAdapter();
 
 		private DataTable tblResult;
 		public DataTable Result
@@ -22,7 +23,7 @@ namespace DataBase
 
 		public void Display(string sql)
 		{
-			oda.SelectCommand = new OdbcCommand(sql, con);
+			oda.SelectCommand = new MySqlCommand(sql, con);
 			tblResult = new DataTable();
 			oda.Fill(tblResult);
 			con.Close();
@@ -30,18 +31,19 @@ namespace DataBase
 
 		public void Insert(string query)
 		{
-			OdbcCommand oc = new OdbcCommand(query, con);
+			MySqlCommand oc = new MySqlCommand(query, con);
 			oc.ExecuteNonQuery();
 			con.Close();
 		}
 
 		public void Connect()
 		{
-				con.ConnectionString = "Driver={MySQL ODBC 5.3 ANSI Driver};" +
-				"Server=localhost;" +
+				con.ConnectionString = 	"Server=localhost;" +
 				"UID=root;" +
 				"PWD=;" +
-				"Database=inventory_db";
+				"Database=db_inventory;" +
+				"Convert Zero Datetime = True";
+
 				/*
 
 			con.ConnectionString = "Driver={MySQL ODBC 5.3 ANSI Driver};" +
